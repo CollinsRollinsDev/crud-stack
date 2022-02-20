@@ -1,0 +1,47 @@
+.container{
+  height: 500px;
+  width: 100%;
+  padding: 2%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  h2{
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    color: var(--reverseTextColor);
+    text-shadow: 1px 1px 3px black;
+    // color: orange;
+  }
+  .breif{
+    color: var(--primaryTextColor);
+    font-size: 22px;
+    margin-right: 18px;
+    font-style: italic;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    text-shadow: 1px 1px 3px black;
+  }
+  .crud{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    font-style: italic;
+    font-size: 29px;
+    color: var(--reverseTextColor);
+    text-shadow: 1px 1px 3px black;
+    font-family: 'Lobster', cursive;
+  }
+}
+
+
+@import '../scssUltils/mobileViews/Intro.module.scss';

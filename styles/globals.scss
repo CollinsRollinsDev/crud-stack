@@ -1,0 +1,66 @@
+html,
+
+/* darkmode */
+.darkMode {
+  
+}
+:root {
+  /* Your default theme */
+  --background: #ececec;
+  --foreground: #121212;
+  --primaryBgColor: #4e00ad;
+  --dark_primaryBgColor: #3b0280;
+  --primaryTextColor: whitesmoke;
+  --secondaryTextColor: white;
+  --primaryContainerBgColor:#3b0280;
+  --primaryContainerTextColor:white;
+  --reverseTextColor:orange;
+  --formBtnBgColor:grey;
+  // --blueish: rgb(56, 56, 230);
+  // --oppBlueish: orange;
+  // --oppBlueishText: black;
+  // --blueishText: white;
+  // --menuBg: rgba(5, 5, 255, 0.39);
+  // --bg-skills:transparent;
+  // --skills-paragraph:rgb(56, 56, 230);
+}
+
+[data-theme='dark'] {
+  --background: #121212;
+  --foreground: white;
+  --primaryBgColor: #121212;
+  --primaryContainerBgColor:orange;
+  --primaryContainerTextColor:white;
+  --primaryTextColor: white;
+  --secondaryTextColor: orange;
+  --reverseTextColor:whitesmoke;
+  --formBtnBgColor:grey;
+  // --blueish:orange;
+  // --oppBlueish: rgb(56, 56, 230);
+  // --blueishText: black;
+  // --oppBlueishText: white;
+  // --menuBg: rgba(255, 166, 0, 0.171);
+  // --bg-skills:rgb(41, 28, 5);
+  // --skills-paragraph:white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color:var(--background);
+}
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
