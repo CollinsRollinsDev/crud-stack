@@ -1,21 +1,22 @@
-.container{
-  height: 500px;
+.container {
+  min-height: 100vh;
   width: 100%;
   padding: 2%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  h2{
+  h2 {
+    margin-top: 100px;
     width: 100%;
     height: auto;
     font-size: 40px;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     color: var(--reverseTextColor);
     text-shadow: 1px 1px 3px black;
     // color: orange;
   }
-  .breif{
+  .breif {
     color: var(--primaryTextColor);
     font-size: 22px;
     margin-right: 18px;
@@ -25,7 +26,7 @@
     margin-top: 40px;
     text-shadow: 1px 1px 3px black;
   }
-  .crud{
+  .crud {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -39,9 +40,8 @@
     font-size: 29px;
     color: var(--reverseTextColor);
     text-shadow: 1px 1px 3px black;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
   }
 }
 
-
-@import '../scssUltils/mobileViews/Intro.module.scss';
+@import "../scssUltils/mobileViews/Intro.module.scss";

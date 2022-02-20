@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Homepage from '../components/Homepage'
-import Login from '../components/Login'
-import styles from '../styles/Home.module.scss'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Homepage from "../components/Homepage";
+import Login from "../components/Login";
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -14,10 +14,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Login />
-    
+      <Login />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

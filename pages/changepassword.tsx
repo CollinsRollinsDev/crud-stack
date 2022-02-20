@@ -1,20 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import {useState, useLayoutEffect} from 'react';
-import Image from 'next/image'
-import Homepage from '../components/Homepage'
-import Update from '../components/Update'
-import { useRouter } from 'next/router'
-import styles from '../styles/Home.module.scss'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useState, useLayoutEffect } from "react";
+import { useRouter } from "next/router";
+import styles from "../styles/Home.module.scss";
 import Cookie from "js-cookie";
 import jwt from "jsonwebtoken";
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import ChangePassword from '../components/ChangePassword';
-
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import ChangePassword from "../components/ChangePassword";
 
 const Home: NextPage = () => {
-  const [userDetails, setUserDetails] = useState<any>()
+  const [userDetails, setUserDetails] = useState<any>();
   const [isProtected, setIsProtected] = useState<boolean>(true);
 
   const router = useRouter();
@@ -25,30 +21,40 @@ const Home: NextPage = () => {
       <Alert severity="error">
         <AlertTitle>Error</AlertTitle>
         You are not logged in. — <strong>Routing back to login page.</strong>
-      </Alert>
+      </Alert>;
       window.setTimeout(() => {
         router.push("/login");
-      },3000)
+      }, 3000);
       setIsProtected(true);
     } else {
-        setIsProtected(false);
+      setIsProtected(false);
     }
     setUserDetails(user_data);
-
   };
 
   useLayoutEffect(() => {
     cookieDecode();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if(isProtected){
-    return <div style={{display:'flex', justifyContent:'center',alignItems:'center', width:'100vw', height:'100vh', backgroundColor:'#202020'}}>
- <Alert color="error" severity="error">
-        <AlertTitle>Error</AlertTitle>
-        You are not logged in. — <strong>Routing back to login page.</strong>
-      </Alert>
-    </div>
+  if (isProtected) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "#202020",
+        }}
+      >
+        <Alert color="error" severity="error">
+          <AlertTitle>Error</AlertTitle>
+          You are not logged in. — <strong>Routing back to login page.</strong>
+        </Alert>
+      </div>
+    );
   }
 
   return (
@@ -59,10 +65,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <ChangePassword userDetails={userDetails} />
-    
+      <ChangePassword userDetails={userDetails} />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
