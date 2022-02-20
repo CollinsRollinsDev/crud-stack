@@ -91,7 +91,7 @@ const handleSubmit = async(e:any) => {
 
   try {
     setBtn("Registering...")
-    const res = await fetch(`http://localhost:8088/signup`, {
+    const res = await fetch(`https://crud-stack-server-side.vercel.app/signup`, {
       method:"POST",
       body:JSON.stringify({
         username:username.toLocaleLowerCase(),

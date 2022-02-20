@@ -74,7 +74,7 @@ const handleSubmit = async(e:any) => {
 
   try {
     setBtn("please wait....")
-    const res = await fetch(`http://localhost:8088/changepassword`, {
+    const res = await fetch(`https://crud-stack-server-side.vercel.app/changepassword`, {
       method:"PATCH",
       body:JSON.stringify({
         id:userDetails?.id,

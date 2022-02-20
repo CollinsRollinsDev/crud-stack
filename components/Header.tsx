@@ -56,7 +56,7 @@ const Header = ({currentPage}:Incoming) => {
       return;
     }
      try {
-      const res = await fetch(`http://localhost:8088/logout`, {
+      const res = await fetch(`https://crud-stack-server-side.vercel.app/logout`, {
         credentials: 'include',
       });
       const {success} = await res.json();

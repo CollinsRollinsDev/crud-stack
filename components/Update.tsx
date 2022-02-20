@@ -81,7 +81,7 @@ const handleSubmit = async(e:any) => {
 
   try {
     setBtn("please wait....")
-    const res = await fetch(`http://localhost:8088/updateuser?queryP=${queryP}`, {
+    const res = await fetch(`https://crud-stack-server-side.vercel.app/updateuser?queryP=${queryP}`, {
       method:"PATCH",
       body:JSON.stringify({
         id:userDetails?.id,

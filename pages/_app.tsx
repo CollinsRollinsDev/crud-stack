@@ -22,7 +22,7 @@ const theme:any = createTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider defaultTheme = 'system'>
+    <ThemeProvider defaultTheme = 'light'>
       <MuiProvider theme={theme}>
       <Component {...pageProps} />
       </MuiProvider>
