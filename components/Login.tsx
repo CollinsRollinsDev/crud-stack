@@ -101,9 +101,9 @@ const Login = () => {
       setSeverity("success");
       setBtn("Success!");
       setOpen(true);
-      window.setTimeout(() => {
+   /*   window.setTimeout(() => {
         router.push("/");
-      }, 2000);
+      }, 2000);*/
       return;
     } catch (error) {
       setAlertMsg("An error occured! Please try again!");
