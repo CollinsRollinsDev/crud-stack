@@ -134,9 +134,9 @@ const Login = () => {
       <section className={styles.mainSpilt}>
       <div className={styles.alertArea}>{displayAlert}</div>
         <section className={styles.left}>
-          <h1>Welcome Back!, Sign in here....</h1>
+          <h1>Welcome Back!, Please Sign in here....</h1>
           <p>
-            you can contact Collins Rollins{" "}
+            You can contact Collins Rollins{" "}
             <a style={{ color: "blue" }} href="https://collinsrollins.com">
               here.
             </a>
