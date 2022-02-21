@@ -75,7 +75,7 @@ const Login = () => {
 
     try {
       setBtn("please wait....");
-     const res = await fetch(`api/login?queryP=${queryP}`, {
+     const res = await fetch(`https://crud-stack-server-side.vercel.app/login?queryP=${queryP}`, {
        method:"post",
        body:JSON.stringify({
          emailAddress:email.toLocaleLowerCase(),
