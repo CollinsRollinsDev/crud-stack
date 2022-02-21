@@ -9,6 +9,7 @@ import Alert from "@mui/material/Alert";
 import IconButton from "@mui/material/IconButton";
 import Collapse from "@mui/material/Collapse";
 import CloseIcon from "@mui/icons-material/Close";
+import axios from 'axios'
 
 const Login = () => {
   const router = useRouter();
@@ -74,20 +75,17 @@ const Login = () => {
 
     try {
       setBtn("please wait....");
-      const res = await fetch(
-        `https://crud-stack-server-side.vercel.app/login?queryP=${queryP}`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            emailAddress: email.toLocaleLowerCase(),
-            password,
-          }),
-          credentials: "include",
-          headers: {
-            "content-type": "application/json",
-          },
-        }
-      );
+     const res = await fetch(`http://localhost:8088/login?queryP=${queryP}`, {
+       method:"post",
+       body:JSON.stringify({
+         emailAddress:email.toLocaleLowerCase(),
+         password
+       }),
+       headers:{
+         "Content-Type":"application/json"
+       },
+       credentials:'include'
+     })
       const data = await res.json();
       if (data.success !== true) {
         setAlertMsg(data.message);

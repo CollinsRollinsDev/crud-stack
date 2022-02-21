@@ -19,6 +19,7 @@ const Header = ({ currentPage }: Incoming) => {
   const cookieDecode: () => void = async () => {
     let cookie: any = Cookie.get("authplay_auth");
     let user_data: any = await jwt.decode(cookie);
+    console.log(user_data, "as cookie")
     if (!user_data) {
       setIsLoggedIn(false);
     } else {
