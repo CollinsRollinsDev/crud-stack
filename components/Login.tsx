@@ -131,8 +131,8 @@ const Login = () => {
       <Header currentPage="login" />
 
 
-      <section className={styles.mainSpilt}>
       <div className={styles.alertArea}>{displayAlert}</div>
+      <section className={styles.mainSpilt}>
         <section className={styles.left}>
           <h1>Welcome Back!, Please Sign in here....</h1>
           <p>

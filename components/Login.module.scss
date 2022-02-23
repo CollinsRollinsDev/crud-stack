@@ -73,11 +73,11 @@
   }
 }
 .alertArea {
-  position: fixed;
+  position: relative;
   z-index: 2;
   width: 100%;
   height: auto;
-  margin-top: 80px
+  // margin-top: 80px
 }
 
 @import "../scssUltils/mobileViews/Login.module.scss";
