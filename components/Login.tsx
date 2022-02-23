@@ -75,7 +75,7 @@ const Login = () => {
 
     try {
       setBtn("please wait....");
-     const res = await fetch(`https://crud-stack-server-side.vercel.app/login?queryP=${queryP}`, {
+     const res = await fetch(`/api/login?queryP=${queryP}`, {
        method:"post",
        body:JSON.stringify({
          emailAddress:email.toLocaleLowerCase(),
@@ -99,9 +99,9 @@ const Login = () => {
       setSeverity("success");
       setBtn("Success!");
       setOpen(true);
-   /*   window.setTimeout(() => {
+     window.setTimeout(() => {
         router.push("/");
-      }, 2000);*/
+      }, 2000);
       return;
     } catch (error) {
       setAlertMsg("An error occured! Please try again!");

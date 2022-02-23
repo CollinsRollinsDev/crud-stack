@@ -5,8 +5,6 @@ import { compare } from "bcrypt";
 import { sign } from 'jsonwebtoken';
 import cookie from 'cookie'
 
-
-
 dbConnection();
 
 type Data = {
@@ -71,7 +69,7 @@ export default async function handler(
           });
          const setMyCookie = res.setHeader(
             "Set-Cookie",
-            cookie.serialize("authplay_auth", token, {
+            cookie.serialize("authPlay", token, {
               httpOnly: false,
               // not a very serious app to set secure=true to only production
               secure: process.env.NODE_ENV !== 'development',
@@ -89,8 +87,8 @@ export default async function handler(
         //         path: "/",
         // }
 
-        //   res.cookie('authplay_auth', token, options)
-          // res.cookie('authplay_auth', token)
+        //   res.cookie('authPlay', token, options)
+          // res.cookie('authPlay', token)
           // if(setMyCookie){
             return res.status(200).json({
               success: true,

@@ -80,7 +80,7 @@ const Update = ({ userDetails }: Incoming) => {
     try {
       setBtn("please wait....");
       const res = await fetch(
-        `https://crud-stack-server-side.vercel.app/updateuser?queryP=${queryP}`,
+        `/api/updateuser?queryP=${queryP}`,
         {
           method: "PATCH",
           body: JSON.stringify({
@@ -157,7 +157,7 @@ const Update = ({ userDetails }: Incoming) => {
             <h2>Fill the form to login</h2>
 
             <TextField
-              required
+              // required
               value={username && username.toLocaleLowerCase()}
               onChange={(e) => setUsername(e.target.value)}
               id="filled-helperText"
@@ -168,7 +168,7 @@ const Update = ({ userDetails }: Incoming) => {
             />
 
             <TextField
-              required
+              // required
               value={email && email.toLocaleLowerCase()}
               onChange={(e) => setEmail(e.target.value)}
               id="filled-helperText"

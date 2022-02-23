@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   const router = useRouter();
   const cookieDecode: () => void = async () => {
-    let cookie: any = Cookie.get("authplay_auth");
+    let cookie: any = Cookie.get("authPlay");
     let user_data: any = await jwt.decode(cookie);
     if (!user_data) {
       <Alert severity="error">

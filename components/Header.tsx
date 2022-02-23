@@ -17,7 +17,7 @@ const Header = ({ currentPage }: Incoming) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const cookieDecode: () => void = async () => {
-    let cookie: any = Cookie.get("authplay_auth");
+    let cookie: any = Cookie.get("authPlay");
     let user_data: any = await jwt.decode(cookie);
     console.log(user_data, "as cookie")
     if (!user_data) {
@@ -76,7 +76,7 @@ const Header = ({ currentPage }: Incoming) => {
     }
     try {
       const res = await fetch(
-        `https://crud-stack-server-side.vercel.app/logout`,
+        `/api/logout`,
         {
           credentials: "include",
         }

@@ -74,7 +74,7 @@ const ChangePassword = ({ userDetails }: Incoming) => {
     try {
       setBtn("please wait....");
       const res = await fetch(
-        `https://crud-stack-server-side.vercel.app/changepassword`,
+        `/api/changepassword`,
         {
           method: "PATCH",
           body: JSON.stringify({

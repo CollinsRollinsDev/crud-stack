@@ -36,7 +36,7 @@ const Delete = ({ userDetails }: Incoming) => {
     try {
       setBtn("Deleting...");
       const res = await fetch(
-        `https://crud-stack-server-side.vercel.app/deleteUser`,
+        `/api/deleteUser`,
         {
           method: "DELETE",
           body: JSON.stringify({
